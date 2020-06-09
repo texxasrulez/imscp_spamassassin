@@ -1,6 +1,6 @@
 # i-MSCP SpamAssassin plugin v2.0.1 Forked by texxasrulez  
 
-Provides SpamAssassin spam filter through MILTER. Updated for use with Roundcube v1.4.x  
+Provides SpamAssassin spam filter through MILTER. Updated for use with Roundcube v1.4.x by texxasrulez  
 
 ## Introduction  
 
