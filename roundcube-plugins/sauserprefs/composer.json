@@ -1,0 +1,31 @@
+{
+  "name": "johndoh/sauserprefs",
+  "description": "Control SpamAssassin settings from within Roundcube",
+  "keywords": ["spamassassin","preferences"],
+  "homepage": "https://github.com/johndoh/roundcube-sauserprefs/",
+  "license": "GPL-3.0",
+  "type": "roundcube-plugin",
+  "version": "1.19-git",
+  "authors": [
+    {
+      "name": "Philip Weir",
+      "email": "roundcube@tehinterweb.co.uk",
+      "role": "Developer"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://plugins.roundcube.net"
+    }
+  ],
+  "require": {
+    "php": ">=5.2.1",
+    "roundcube/plugin-installer": ">=0.1.2"
+  },
+  "extra": {
+    "roundcube": {
+      "min-version": "1.5-git"
+    }
+  }
+}
