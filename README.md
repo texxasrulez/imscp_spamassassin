@@ -1,58 +1,59 @@
-# i-MSCP SpamAssassin plugin v2.0.1
+# i-MSCP SpamAssassin plugin v2.0.1 Forked by texxasrulez  
 
-Provides SpamAssassin spam filter through MILTER.
+Provides SpamAssassin spam filter through MILTER. Updated for use with Roundcube v1.4.x  
 
-## Introduction
+## Introduction  
 
 Apache SpamAssassin is the #1 Open Source anti-spam platform giving system
 administrators a filter to classify email and block spam (unsolicited bulk
-email).
+email).  
 
 It uses a robust scoring framework and plug-ins to integrate a wide range of
 advanced heuristic and statistical analysis tests on email headers and body
 text including text analysis, Bayesian filtering, DNS blocklists, and
-collaborative filtering databases.
+collaborative filtering databases.  
 
-Apache SpamAssassin is a project of the Apache Software Foundation (ASF).
+Apache SpamAssassin is a project of the Apache Software Foundation (ASF).  
 
-## Requirements
+## Requirements  
 
-- i-MSCP Serie ≥ 1.4.x
-- Roundcube Webmail (OPTIONAL)
+- i-MSCP Serie ≥ 1.4.x  
+- Roundcube Webmail (OPTIONAL)  
 
-## Installation
+## Installation  
 
-1. Be sure that all requirements as stated in the requirements section are met
-2. Upload the plugin through the plugin management interface
-3. Edit the plugin configuration file according your needs
-4. Install the plugin through the plugin management interface
+1. Be sure that all requirements as stated in the requirements section are met  
+2. Upload the plugin through the plugin management interface  
+3. Edit the plugin configuration file according your needs  
+4. Install the plugin through the plugin management interface  
 
-## Update
+## Update  
 
-1. Be sure that all requirements as stated in the requirements section are met
-2. Backup your plugin configuration file if needed
-3. Upload the plugin through the plugin management interface
+1. Be sure that all requirements as stated in the requirements section are met  
+2. Backup your plugin configuration file if needed  
+3. Upload the plugin through the plugin management interface  
 
-### Restore you plugin configuration file if needed
+### Restore you plugin configuration file if needed  
 
-1. Restore your plugin configuration file (compare it with the new version first)
-2. Update the plugin list through the plugin management interface
+1. Restore your plugin configuration file (compare it with the new version first)  
+2. Update the plugin list through the plugin management interface  
 
-## Configuration
+## Configuration  
 
-See [Configuration file](config.php)
+See [Configuration file](config.php)  
 
-When changing a configuration parameter in the plugin configuration file, don't
-forget to trigger a plugin list update, else you're changes will not be token
-into account.
+When changing a configuration parameter in the plugin configuration file, don't  
+forget to trigger a plugin list update, else you're changes will not be token  
+into account.  
 
-### SpamAssassin plugin statuses
+### SpamAssassin plugin statuses  
 
 Enabling a SpamAssassin plugin in the plugin configuration file doesn't
 necessarily means that this plugin will be active. This is the case for
 plugins that can be enforced in the plugin configuration file. For these
-plugins, the rules are as follows:
+plugins, the rules are as follows:  
 
+```
 <table>
     <tr>
         <th>Plugin status</th>
@@ -81,83 +82,85 @@ plugins, the rules are as follows:
         </td>
     </tr>
 </table>
+```
 
-For the other plugins, this depend of their nature:
+For the other plugins, this depend of their nature:  
 
 - AWL, DKIM and Rule2XSBody and SPF SpamAssassin plugins are enabled or
   disabled for all users. End-users cannot act on these plugins through
-  their SpamAssassin preferences.
+  their SpamAssassin preferences.  
 - The TextCat SpamAssassin plugin, when enabled, make end-users able to
-  change default behavior for language guessing. 
+  change default behavior for language guessing.  
 
 
-## 3rd-party SpamAssassin ruleset
+## 3rd-party SpamAssassin ruleset  
 
 By default the plugin will setup an additional channel for download of SpamAssassin
 ruleset. This channel is provided by Heinlein Support that is a German ISP that
-is specialized in mail servers.
+is specialized in mail servers.  
  
 Heinlein Support founder and owner [Peer Heinlein](https://de.wikipedia.org/wiki/Peer_Heinlein)
 has written several [books](https://portal.dnb.de/opac.htm?method=simpleSearch&query=123703522)
-about Dovecot and Postfix.
+about Dovecot and Postfix.  
 
-For further details you can have a look at
-[Aktuelle SpamAssassin-Regeln von Heinlein Support](https://www.heinlein-support.de/blog/news/aktuelle-spamassassin-regeln-von-heinlein-support/)
+For further details you can have a look at  
+[Aktuelle SpamAssassin-Regeln von Heinlein Support](https://www.heinlein-support.de/blog/news/aktuelle-spamassassin-regeln-von-heinlein-support/)  
 
-## 3rd party SpamAssassin plugins
+## 3rd party SpamAssassin plugins  
 
-### DecodeShortURLs
+### DecodeShortURLs  
 
 The [DecodeShortURLs](https://github.com/smfreegard/DecodeShortURLs "DecodeShortURLs")
 plugin looks for URLs shortened by a list of URL shortening services and upon
 finding a matching URL will connect using to the shortening service and do an
 HTTP HEAD lookup and retrieve the location header which points to the actual
 shortened URL, it then adds this URL to the list of URIs extracted by
-SpamAssassin which can then be accessed by other plugins, such as URIDNSBL.
+SpamAssassin which can then be accessed by other plugins, such as URIDNSBL.  
 
-### iXhash2
+### iXhash2  
 
 [iXhash2](http://mailfud.org/iXhash2/ "iXhash2") is an unofficial improved
 version of  [iXhash](http://www.ixhash.net/ "iXhash") plugin for SpamAssassin,
 adding async DNS lookups for performance and removing unneeded features. It's
-fully compatible with the iXhash 1.5.5 implementation.
+fully compatible with the iXhash 1.5.5 implementation.  
 
-## Included Roundcube Plugins
+## Included Roundcube Plugins  
 
-### markasjunk plugin
+### markasjunk plugin  
 
 If enabled in the plugin configuration file, the `markasjunk` Roundcube plugin
 adds a new button to the mailbox toolbar to mark the selected messages as
 'Junk'/'Not Junk' and will also learn the bayesian database. It will also
-detach original messages from spam reports if the message is not junk.
+detach original messages from spam reports if the message is not junk.  
 
-### SAUserPrefs plugin
+### SAUserPrefs plugin  
 
 If enabled, the `SAUserPrefs` Roundcube plugin adds a 'Spam' tab to the
 'Settings' page to allow the users to change their SpamAssassin preferences
-which are stored in the i-MSCP SpamAssassin database.
+which are stored in the i-MSCP SpamAssassin database.  
 
 The SpamAssassin preferences displayed in Roundcube will vary depending the
-changes you make in the plugin configuration file.
+changes you make in the plugin configuration file.  
 
-Roundcube user config: Settings -> Spam
+Roundcube user config: Settings -> Spam  
 
-#### Move Spam into Junk folder
+#### Move Spam into Junk folder  
 
 If you want to move Spam into the users Junk folder automatically, you will
 need to use Dovecot and the `Managesieve` Roundcube plugin that is included
-in the i-MSCP RoundcubePlugins plugin.
+in the i-MSCP RoundcubePlugins plugin.  
 
-#### SpamAssassin user preferences
+#### SpamAssassin user preferences  
 
 The default SpamAssassin user preferences are stored in the table `userpref` of
-the i-MSCP SpamAssassin database.
+the i-MSCP SpamAssassin database.  
 
-#### Global SpamAssassin preferences
+#### Global SpamAssassin preferences  
 
 These are the `$GLOBAL` default values which will be set during plugin
-installation.
+installation.  
 
+```
 <table>
     <tr>
         <th>username</th>
@@ -254,32 +257,34 @@ address as username.
         <td>[SPAM-_HITS_]</td>
     </tr>
 </table>
+```
 
-## Testing
+## Testing  
 
-### GTUBE (Generic Test for Unsolicited Bulk Email)
+### GTUBE (Generic Test for Unsolicited Bulk Email)  
 
-Send a mail with the following content to one of your i-MSCP mail accounts:
+Send a mail with the following content to one of your i-MSCP mail accounts:  
 
 ```
 XJS*C4JDBQADN1.NSBN3*2IDNEN*GTUBE-STANDARD-ANTI-UBE-TEST-EMAIL*C.34X
 ```
 
 Be aware that the `GTUBE` signature above must be added on a line, without
-whitespace nor line break.
+whitespace nor line break.  
 
 ## License
 
-    i-MSCP SpamAssassin plugin
-    Copyright (C) 2015-2017 Laurent Declercq <l.declercq@nuxwin.com>
-    Copyright (C) 2013-2016 Rene Schuster <mail@reneschuster.de>
-    Copyright (C) 2013-2016 Sascha Bay <info@space2place.de>
+    i-MSCP SpamAssassin plugin  
+    Copyright (C) 2015-2017 Laurent Declercq <l.declercq@nuxwin.com>  
+    Copyright (C) 2013-2016 Rene Schuster <mail@reneschuster.de>  
+    Copyright (C) 2013-2016 Sascha Bay <info@space2place.de>  
     
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
-    the Free Software Foundation; version 2 of the License
+    the Free Software Foundation; version 2 of the License  
     
     This program is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.
+    GNU General Public License for more details.  
+	
