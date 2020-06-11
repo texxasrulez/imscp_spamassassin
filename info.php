@@ -33,6 +33,6 @@ return array(
     'date'        => '2020-06-06',
     'build'       => '2020060600',
     'name'        => 'SpamAssassin',
-    'desc'        => 'Provides SpamAssassin spam filter through MILTER with Roundcube 1.4.x Support.',
+    'desc'        => 'Provides SpamAssassin spam filter through MILTER for Roundcube 1.4.x.',
     'url'         => 'http://wiki.i-mscp.net/doku.php?id=plugins:spamassassin'
 );

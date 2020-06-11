@@ -370,12 +370,11 @@ return array(
     //
     // Only relevant if you use the Roundcube Webmail
     'roundcube'      => array(
-        // MarkAsJunk2 Roundcube plugin
-        // See https://github.com/JohnDoh/Roundcube-Plugin-Mark-as-Junk-2
+        // MarkAsJunk Roundcube plugin
         //
         // Make users able to mark their mails as SPAM|HAM for SA learning
         // Requires the SA Bayes plugin
-        'markasjunk2' => array(
+        'markasjunk' => array(
             // Possible value: true, false
             'enabled' => true
         ),
