@@ -5,7 +5,7 @@
  */
 
 // spamassassin database settings
-$config['sauserprefs_db_dsnw'] = 'mysql://username:password@localhost/database';
+$config['sauserprefs_db_dsnw'] = 'mysql://sa_user:K57xQkl1eGkpVW5a@localhost/imscp_spamassassin';
 
 // PEAR database DSN for read only operations (if empty write database will be used)
 // useful for database replication
