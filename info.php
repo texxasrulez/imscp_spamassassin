@@ -22,6 +22,7 @@
 
 return array(
     'author'      => array(
+		'Gene Hawkins',
         'Laurent Declercq',
         'Rene Schuster',
         'Sascha Bay'
@@ -32,6 +33,6 @@ return array(
     'date'        => '2017-07-03',
     'build'       => '2017070300',
     'name'        => 'SpamAssassin',
-    'desc'        => 'Provides SpamAssassin spam filter through MILTER.',
+    'desc'        => 'Provides SpamAssassin spam filter through MILTER with Roundcube 1.4.x Support.',
     'url'         => 'http://wiki.i-mscp.net/doku.php?id=plugins:spamassassin'
 );
