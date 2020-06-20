@@ -28,10 +28,10 @@ return array(
         'Sascha Bay'
     ),
     'email'       => 'gene@genesworld.net',
-    'version'     => '1.0.0',
+    'version'     => '1.0.1',
     'require_api' => '1.4.0',
-    'date'        => '2020-06-06',
-    'build'       => '2020060600',
+    'date'        => '2020-06-20',
+    'build'       => '2020062001',
     'name'        => 'SpamAssassin',
     'desc'        => 'Provides SpamAssassin spam filter through MILTER for Roundcube >= 1.4',
     'url'         => 'https://github.com/texxasrulez/imscp_spamassassin'
